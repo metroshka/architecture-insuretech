@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scaletestapp
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scaletestapp
+  template:
+    metadata:
+      labels:
+        app: scaletestapp
+    spec:
+      containers:
+        - name: scaletestapp
+          # Подготовка исходного образа для Minikube на Mac ARM:
+          # docker pull --platform linux/amd64 ghcr.io/yandex-practicum/scaletestapp:latest
+          # minikube image load -p insuretech --daemon ghcr.io/yandex-practicum/scaletestapp:latest
+          image: ghcr.io/yandex-practicum/scaletestapp:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+          resources:
+            requests:
+              # База расчёта HPA; 80% от 20Mi = 16Mi.
+              memory: 20Mi
+            limits:
+              memory: 30Mi
+          readinessProbe:
+            tcpSocket:
+              port: http
+            initialDelaySeconds: 2
+            periodSeconds: 5
