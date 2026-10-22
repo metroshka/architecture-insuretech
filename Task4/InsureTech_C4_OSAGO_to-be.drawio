@@ -374,7 +374,7 @@
         <mxCell id="page-guide" value="&lt;div style=&quot;font-family:Arial;line-height:1.35&quot;&gt;&lt;div style=&quot;font-size:22px;font-weight:bold;margin-bottom:14px&quot;&gt;Детали решения&lt;/div&gt;&lt;div style=&quot;font-size:19px&quot;&gt;Страница 2 — контракты и общий срок 60 секунд.&lt;br&gt;Страница 3 — сбои, паттерны и нагрузка.&lt;br&gt;Страница 4 — несколько экземпляров и доставка в браузер.&lt;/div&gt;&lt;/div&gt;" style="rounded=1;arcSize=7;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#F2F6FA;strokeColor=#C2D1E2;fontColor=#203A59;align=left;verticalAlign=top;spacing=22;" vertex="1" parent="1">
           <mxGeometry x="2350" y="2150" width="1210" height="175" as="geometry" />
         </mxCell>
-        <mxCell id="draft-symbols" value="Паттерны пока обозначены текстом R1–R4. Перед сдачей заменить их значками библиотеки задания; архитектура от этого не меняется." style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#8A510D;fontStyle=0;spacing=0;" vertex="1" parent="1">
+        <mxCell id="draft-symbols" value="Паттерны обозначены текстом R1–R4: библиотека задания недоступна. Недоступность подтверждена куратором." style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#8A510D;fontStyle=0;spacing=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="2340" width="3520" height="40" as="geometry" />
         </mxCell>
       </root>
@@ -418,7 +418,7 @@
         <mxCell id="security" value="&lt;div style=&quot;font-family:Arial;line-height:1.35&quot;&gt;&lt;div style=&quot;font-size:22px;font-weight:bold;margin-bottom:14px&quot;&gt;Доступ и границы проекта&lt;/div&gt;&lt;div style=&quot;font-size:19px&quot;&gt;REST, SSE и повторное чтение проверяют владельца заявки. HTTPS; для браузера — защищённая сессионная cookie, для изменяющих запросов — защита CSRF. Токены не передаются в URL. События Kafka защищены TLS и ACL; лишние персональные данные и изображения документов в сообщения и логи не добавляются.&lt;br&gt;Числа 2 s для polling / резерва и 3 s для HTTP timeout — начальные настройки, не подтверждённые результаты нагрузочного теста.&lt;/div&gt;&lt;/div&gt;" style="rounded=1;arcSize=7;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#F2F6FA;strokeColor=#C2D1E2;fontColor=#203A59;align=left;verticalAlign=top;spacing=22;" vertex="1" parent="1">
           <mxGeometry x="40" y="1790" width="2520" height="175" as="geometry" />
         </mxCell>
-        <mxCell id="draft-symbols" value="Паттерны пока обозначены текстом R1–R4. Перед сдачей заменить их значками библиотеки задания; архитектура от этого не меняется." style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#8A510D;fontStyle=0;spacing=0;" vertex="1" parent="1">
+        <mxCell id="draft-symbols" value="Паттерны обозначены текстом R1–R4: библиотека задания недоступна. Недоступность подтверждена куратором." style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#8A510D;fontStyle=0;spacing=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="1990" width="2520" height="40" as="geometry" />
         </mxCell>
       </root>
@@ -432,7 +432,7 @@
         <mxCell id="title" value="ОСАГО · сбои и ограничения нагрузки" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=34;fontColor=#203A59;fontStyle=1;spacing=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="25" width="2360" height="52" as="geometry" />
         </mxCell>
-        <mxCell id="subtitle" value="Текстовые обозначения R1–R4 соответствуют меткам на основной схеме. Их заменим значками учебной библиотеки." style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=21;fontColor=#203A59;fontStyle=0;spacing=0;" vertex="1" parent="1">
+        <mxCell id="subtitle" value="Текстовые обозначения R1–R4 соответствуют меткам на основной схеме. Библиотека задания недоступна." style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=21;fontColor=#203A59;fontStyle=0;spacing=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="88" width="2500" height="40" as="geometry" />
         </mxCell>
         <mxCell id="page-number" value="3 / 4" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=right;verticalAlign=middle;fontFamily=Arial;fontSize=21;fontColor=#203A59;fontStyle=0;spacing=0;" vertex="1" parent="1">
@@ -462,7 +462,7 @@
         <mxCell id="verification" value="&lt;div style=&quot;font-family:Arial;line-height:1.35&quot;&gt;&lt;div style=&quot;font-size:24px;font-weight:bold;margin-bottom:14px&quot;&gt;Что проверить при реализации&lt;/div&gt;&lt;div style=&quot;font-size:21px&quot;&gt;Измерить: принятие → первое предложение, задержку Kafka / outbox / SSE, долю ответов в срок, 429/5xx/таймауты по страховым, возраст jobs и число соединений.&lt;br&gt;Проверки: 2 500 клиентов; медленная / недоступная страховая; повтор POST и события Kafka; перезапуск Pod; разрыв SSE; сбой брокера и БД. Убедиться в отсутствии дублей и продления deadline.&lt;br&gt;&lt;b&gt;Это план проверки архитектуры. Нагрузочный тест ОСАГО в Task4 не выполнялся.&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;arcSize=7;whiteSpace=wrap;html=1;overflow=hidden;fillColor=#F2F6FA;strokeColor=#C2D1E2;fontColor=#203A59;align=left;verticalAlign=top;spacing=22;" vertex="1" parent="1">
           <mxGeometry x="40" y="1755" width="2520" height="185" as="geometry" />
         </mxCell>
-        <mxCell id="draft-symbols" value="Паттерны пока обозначены текстом R1–R4. Перед сдачей заменить их значками библиотеки задания; архитектура от этого не меняется." style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#8A510D;fontStyle=0;spacing=0;" vertex="1" parent="1">
+        <mxCell id="draft-symbols" value="Паттерны обозначены текстом R1–R4: библиотека задания недоступна. Недоступность подтверждена куратором." style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#8A510D;fontStyle=0;spacing=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="1985" width="2520" height="40" as="geometry" />
         </mxCell>
       </root>
@@ -534,7 +534,7 @@
         <mxCell id="source-links" value="&lt;a href=&quot;https://www.postgresql.org/docs/current/sql-notify.html&quot;&gt;PostgreSQL NOTIFY&lt;/a&gt; · &lt;a href=&quot;https://www.postgresql.org/docs/current/sql-listen.html&quot;&gt;LISTEN&lt;/a&gt; · &lt;a href=&quot;https://html.spec.whatwg.org/multipage/server-sent-events.html&quot;&gt;SSE / EventSource&lt;/a&gt; · &lt;a href=&quot;https://www.rfc-editor.org/rfc/rfc9110.html#section-9.2.2&quot;&gt;HTTP: идемпотентность&lt;/a&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#203A59;fontStyle=0;spacing=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="2110" width="2520" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="draft-symbols" value="Паттерны пока обозначены текстом R1–R4. Перед сдачей заменить их значками библиотеки задания; архитектура от этого не меняется." style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#8A510D;fontStyle=0;spacing=0;" vertex="1" parent="1">
+        <mxCell id="draft-symbols" value="Паттерны обозначены текстом R1–R4: библиотека задания недоступна. Недоступность подтверждена куратором." style="text;html=1;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#8A510D;fontStyle=0;spacing=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="2180" width="2520" height="40" as="geometry" />
         </mxCell>
       </root>
